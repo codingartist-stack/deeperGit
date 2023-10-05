@@ -3,9 +3,8 @@ function capitalize(string) {
   const remainingLetters = string.substring(1);
 
   const firstUpperCase = firstLetter.toUpperCase();
-  remainingLetters.toLowerCase();
 
-  return firstUpperCase + remainingLetters;
+  return firstUpperCase + remainingLetters.toLowerCase();
 }
 
 module.exports = capitalize;
