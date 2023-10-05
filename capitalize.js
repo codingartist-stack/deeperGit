@@ -5,7 +5,7 @@ function capitalize(string) {
   const firstUpperCase = firstLetter.toUpperCase();
   remainingLetters.toLowerCase();
 
-  console.log(firstUpperCase + remainingLetters);
+  return firstUpperCase + remainingLetters;
 }
 
-capitalize(hello);
+module.exports = capitalize;
