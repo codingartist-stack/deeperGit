@@ -1,0 +1,22 @@
+{
+  "name": "deepergit",
+  "version": "1.0.0",
+  "description": "Odin lesson - deeper look at git - learning more commands",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingartist-stack/deeperGit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingartist-stack/deeperGit/issues"
+  },
+  "homepage": "https://github.com/codingartist-stack/deeperGit#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
