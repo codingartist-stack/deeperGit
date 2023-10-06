@@ -62,3 +62,21 @@ test('caesars cipher', () => {
 test('caesars cipher', () => {
   expect(caesarCipher.decrypt('B', 1)).toMatch('A');
 });
+
+test('caesars cipher', () => {
+  expect(caesarCipher.decrypt('A', 1)).toMatch('Z');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.decrypt('A', 2)).toMatch('Y');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.decrypt('Z', 2)).toMatch('X');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.decrypt('JGA VJGTG, VGFFA DGCT', 2)).toMatch(
+    'HEY THERE, TEDDY BEAR'
+  );
+});
