@@ -1,6 +1,7 @@
 const capitalize = require('./capitalize');
 const reverseString = require('./reverseString');
 const calculator = require('./calculator');
+const caesarCipher = require('./caesarCipher');
 
 test('capitalize first letter', () => {
   expect(capitalize('hello')).toMatch('Hello');
@@ -26,3 +27,7 @@ test('calculate divide', () => {
 test('calculate multiply', () => {
   expect(calculator.multiply(2, 2)).toBe(4);
 });
+
+// test('caesars cipher', () => {
+//   expect(caesarCipher('A')).toMatch('B');
+// });
