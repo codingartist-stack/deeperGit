@@ -76,7 +76,17 @@ test('caesars cipher', () => {
 });
 
 test('caesars cipher', () => {
+  expect(caesarCipher.decrypt(',', 2)).toMatch(',');
+});
+
+test('caesars cipher', () => {
   expect(caesarCipher.decrypt('JGA VJGTG, VGFFA DGCT', 2)).toMatch(
+    'HEY THERE, TEDDY BEAR'
+  );
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.decrypt('ROI DROBO, DONNI LOKB', 10)).toMatch(
     'HEY THERE, TEDDY BEAR'
   );
 });

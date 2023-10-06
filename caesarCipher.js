@@ -26,10 +26,11 @@ const caesarCipher = {
     for (let i = 0; i < string.length; i++) {
       const letterCode = string[i].charCodeAt();
       const decryptShift = letterCode - key;
+      const lowestCodeNumber = 40 + key;
       if (decryptShift >= 65 && decryptShift <= 90) {
         const letter = String.fromCharCode(decryptShift);
         decrypted += letter;
-      } else if (decryptShift < 65) {
+      } else if (decryptShift < 65 && decryptShift > lowestCodeNumber) {
         let wrapShift = decryptShift + 26;
         wrapLetter = String.fromCharCode(wrapShift);
         decrypted += wrapLetter;
@@ -41,5 +42,4 @@ const caesarCipher = {
   },
 };
 
-console.log(caesarCipher.decrypt(',', 2));
 module.exports = caesarCipher;
