@@ -28,6 +28,26 @@ test('calculate multiply', () => {
   expect(calculator.multiply(2, 2)).toBe(4);
 });
 
-// test('caesars cipher', () => {
-//   expect(caesarCipher('A')).toMatch('B');
-// });
+test('caesars cipher', () => {
+  expect(caesarCipher.encrypt('A', 1)).toMatch('B');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.encrypt('Z', 1)).toMatch('A');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.encrypt('Z', 2)).toMatch('B');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.encrypt('Z A', 2)).toMatch('B C');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.encrypt('Z. A', 2)).toMatch('B. C');
+});
+
+test('caesars cipher', () => {
+  expect(caesarCipher.decrypt('B', 1)).toMatch('A');
+});

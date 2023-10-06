@@ -1,5 +1,26 @@
 const caesarCipher = {
-  encrypt: function (string) {
+  encrypt: function (string, shift) {
     //e(x) = x + k
+    let encrypted = '';
+    for (let i = 0; i < string.length; i++) {
+      const letterCode = string[i].charCodeAt();
+      const encryptShift = letterCode + shift;
+      if (encryptShift >= 65 && encryptShift <= 90) {
+        const letter = String.fromCharCode(encryptShift);
+        encrypted += letter;
+      } else if (encryptShift > 90) {
+        let wrapShift = encryptShift - 90;
+        const wrapCode = wrapShift + 64;
+        const wrapLetter = String.fromCharCode(wrapCode);
+        encrypted += wrapLetter;
+      } else {
+        encrypted += string[i];
+      }
+    }
+    return encrypted;
   },
+
+  decrypt: function (string, key) {},
 };
+
+module.exports = caesarCipher;
