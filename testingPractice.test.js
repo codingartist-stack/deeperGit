@@ -2,6 +2,7 @@ const capitalize = require('./capitalize');
 const reverseString = require('./reverseString');
 const calculator = require('./calculator');
 const caesarCipher = require('./caesarCipher');
+const analyze = require('./analyzeArray');
 
 //CAPITALIZE
 test('capitalize first letter', () => {
@@ -89,4 +90,13 @@ test('caesars cipher', () => {
   expect(caesarCipher.decrypt('ROI DROBO, DONNI LOKB', 10)).toMatch(
     'HEY THERE, TEDDY BEAR'
   );
+});
+
+test('analyze array', () => {
+  expect(analyze([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });
